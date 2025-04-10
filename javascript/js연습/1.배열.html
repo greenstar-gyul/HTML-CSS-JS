@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h1>배열</h1>
+    
+    <script>
+        // 배열에 1에서 100사이의 무작위 수 10개를 입력
+        // 배열의 합 계산
+        // 최대값과 최소값 구하기
+
+        let arr = [];
+        
+        for (let i = 0; i < 10; i++) {
+            let num = Math.floor(Math.random() * 100) + 1;
+            if (arr.indexOf(num) < 0) {
+                arr.push(num);
+            }
+            else {
+                i--;
+            }
+        }
+
+        console.log(`무작위 수 10개 => ${arr.join(', ')}`);
+
+        let sum = 0;
+        let min = 101;
+        let max = 0;
+
+        // 방법 1. 반복문 이용
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            if (min > arr[i]) min = arr[i];
+            if (max < arr[i]) max = arr[i];
+        }
+
+        console.log(`배열의 합 = ${sum}, 최대값 = ${max}, 최소값 = ${min}`);
+
+        sum = 0;
+        min = 101;
+        max = 0;
+        
+        // 방법 2. reduce() 메소드 이용
+        sum = arr.reduce((a, b) => a + b);
+        min = arr.reduce((a, b) => a < b ? a : b);
+        max = arr.reduce((a, b) => a > b ? a : b);
+        
+        console.log(`배열의 합 = ${sum}, 최대값 = ${max}, 최소값 = ${min}`);
+
+        sum = 0;
+        min = 101;
+        max = 0;
+        
+        // 방법 3. min, max, reduce 혼합 이용
+        sum = arr.reduce((a, b) => a + b);
+        min = Math.min(...arr);
+        max = Math.max(...arr);
+        
+        console.log(`배열의 합 = ${sum}, 최대값 = ${max}, 최소값 = ${min}`);
+        
+        sum = 0;
+        min = 101;
+        max = 0;
+
+        // 방법 4. foreach() 메소드 이용
+        arr.forEach((num) => {
+            sum += num;
+            min = min < num ? min : num;
+            max = max > num ? max : num;
+        })
+        
+        console.log(`배열의 합 = ${sum}, 최대값 = ${max}, 최소값 = ${min}`);
+
+        // 그 외 기타 등등 많다...
+        
+    </script>
+
+    
+</body>
+</html>

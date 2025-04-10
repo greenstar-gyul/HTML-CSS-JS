@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위치지정</title>
+  <style>
+    div {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000000;
+      margin: 10px;
+    }
+    #box2 {
+      background-color: rgb(86, 53, 116);
+      position: relative;
+      top: -50px;
+      left: 50px;
+    }
+    #box3 {
+      width: 300px;
+      height: 300px;
+      background-color: rgb(21, 89, 116);
+      position: relative;
+    }
+    #box3 div {
+      background-color: darkcyan;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      margin: 0;
+    }
+
+    #abs1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #abs2 {
+      top: 0;
+      right: 0;
+    }
+
+    #abs3 {
+      bottom: 0;
+      left: 0;
+    }
+
+    #abs4 {
+      bottom: 0;
+      right: 0;
+    }
+
+    #abs5 {
+      top: 125px;
+      left: 125px;
+    }
+
+    #box3 h3 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: azure;
+      top: 50px;
+      left: 125px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    #box3 #abs6 {
+      top: 140px;
+      left: 150px;
+      background-color: aqua;
+    }
+    #box3 #abs7 {
+      top: 170px;
+      left: 120px;
+      background-color: rgb(157, 255, 92);
+      z-index: 999;
+    }
+    #box3 #abs8 {
+      top: 150px;
+      left: 100px;
+      background-color: rgb(99, 88, 255);
+    }
+
+    #box4 {
+      width: 70px;
+      height: 70px;;
+      background-color: rgb(116, 53, 69);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 70px;
+      color: white;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    img {
+      /* visibility: hidden; */
+      /* display: none; */
+      opacity: 0.4;
+    }
+    img:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1">box1</div>
+  <div id="box2">box2</div>
+  <div id="box3"> box3
+    <div id="abs1">abs1</div>
+    <div id="abs2">abs2</div>
+    <div id="abs3">abs3</div>
+    <div id="abs4">abs4</div>
+    <div id="abs5">abs5</div>
+    <div id="abs6">z1</div>
+    <div id="abs7">z2</div>
+    <div id="abs8">z3</div>
+    <h3>css</h3>
+  </div>
+  <div id="box4">top</div>
+  <img src="./img/레드향.jpg" alt="레드향1" width="200px" height="200">
+  <img class="hidden" src="./img/레드향.jpg" alt="레드향2" width="200px" height="200">
+  <img src="./img/레드향.jpg" alt="레드향3" width="200px" height="200">
+</body>
+</html>

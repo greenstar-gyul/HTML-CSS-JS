@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Type</title>
+  <link href="./css/input-type.css" rel="stylesheet">
+</head>
+<body>
+  <div id="container">
+    <form action="sugang.jsp" method="post" name="sugang">
+      <fieldset>
+        <label for="uid">아이디:</label>
+        <input type="text" name="uid" id="uid">
+        <label for="uid">비밀번호:</label>
+        <input type="text" name="upw" id="upw">
+        <button type="button" onclick="">로그인</button>
+      </fieldset>
+
+      <fieldset id="info">
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <label for="nid">아이디 : <span class="red">*</span></label>
+            <input type="text" name="nid" id="nid" size="10">
+          </li>
+          <li>
+            <label for="npw">비밀번호 : <span class="red">*</span></label>
+            <input type="password" name="npw" id="npw" size="20">
+          </li>
+          <li>
+            <label for="npw_re">비밀번호 확인 : <span class="red">*</span></label>
+            <input type="password" name="npw_re" id="npw_re" size="20">
+          </li>
+          <li>
+            <label for="name">이름 : <span class="red">*</span></label>
+            <input type="text" name="name" id="name" size="10">
+          </li>
+          <li>
+            <label for="email">메일 주소 : <span class="red">*</span></label>
+            <input type="email" name="email" id="email" size="20">
+          </li>
+          <li>
+            <label for="url">홈페이지 주소 : </label>
+            <input type="url" name="url" id="url" size="20">
+          </li>
+          <li>
+            <label for="postn">우편번호 : </label>
+            <input type="text" name="postn" id="postn1" size="3"> - <input type="text" name="postn" id="postn1" size="3">
+            <button type="button">우편번호 검색</button>
+          </li>
+          <li>
+            <label for="addr">집주소 : </label>
+            <input type="text" name="addr" id="addr" size="40">
+          </li>
+          <li>
+            <label for="tel">연락처 : </label>
+            <input type="tel" name="tel" id="tel" size="20">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <label for="search">검색 : </label>
+        <input type="search" name="search" id="search" size="20">
+        <button type="button">검색</button>
+        <button type="button">다시입력</button>
+      </fieldset>
+      <fieldset>
+        <legend>등록 정보</legend>
+        <ul>
+          <li>
+            <label for="join_num">참여인원<span class="small">(최대 10명)</span>: </label>
+            <input type="number" name="join_num" id="join_num" min="0" max="10" step="1" value="1">
+          </li>
+          <li>
+            <label for="sup_num">지원물품<span class="small">(1인당 5개)</span>: </label>
+            <input type="number" name="sup_num" id="sup_num" min="0" max="50" step="5" value="1">
+          </li>
+          <li>
+            <label for="hope_rank">희망 단계<span class="small">(상,중,하)</span>: </label>
+            <input type="range" min="1" max="3" value="1" step="1">
+          </li>
+          <li>
+            <label for="file">첨부파일 선택 : </label>
+            <input type="file" name="file" id="file">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>수강 과목을 선택하세요<span class="small">(1과목 선택 가능)</span></legend>
+        <ul>
+          <li>
+            <label for="color">선호색상 </label>
+            <input type="color" name="color" id="color" value="#00ff00">
+          </li>
+          <li>
+            <label>신청 과목<span class="small">회화</span></label>
+            <label><input type="radio" name="subject" value="eng_basic" checked>영어회화(초급)</label>
+            <label><input type="radio" name="subject" value="eng_mid">영어회화(중급)</label>
+            <label><input type="radio" name="subject" value="eng_adv">영어회화(고급)</label>
+          </li>
+          <li>
+            <label>관심분야는?<span class="small">(다수선택)</span></label>
+            <label><input type="checkbox" name="bunya" value="twitter" checked>Twitter</label>
+            <label><input type="checkbox" name="bunya" value="facebook">Facebook</label>
+            <label><input type="checkbox" name="bunya" value="instagram">Instagram</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="border_none">
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

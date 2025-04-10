@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+  <style>
+    div {
+      width: 100px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      padding: 10px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .bold {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    table, tr, td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    td {
+      /* width: 100px; */
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>반복문</h1>
+  <script>
+    /*
+    반복문
+    특정 조건을 만족하는 동안 명령문을 반복해서 실행
+    for (초깃값; 조건; 증감식) {
+       실행할 명령
+    }
+    */
+
+    /*let sum = 0;
+    let maxNum = 10;
+    for (let i = 1; i <= maxNum; i++) {
+      sum += i;
+      // console.log(`${i} 회전 ==> i = ${i}, 합 = ${sum}`);
+    }
+    console.log(`합 = ${sum}`);
+
+    let sumEven = 0;
+    let sumOdd = 0;
+    
+    // // let start = new Date().getTime();
+    // for (let i = 1; i <= maxNum; i += 2) {
+    //   sumEven += i + 1;
+    //   sumOdd += i;
+    // }
+    // console.log(`홀수 합 = ${sumOdd}, 짝수 합 = ${sumEven}`);
+    // // let end = new Date().getTime();
+    // // console.log(`${end - start}ms`);
+
+    sumEven = 0;
+    sumOdd = 0;
+    // start = new Date().getTime();
+    for (let i = 1; i <= maxNum; i++) {
+      if (i % 2 == 0) {
+        sumEven += i;
+      }
+      else {
+        sumOdd += i;
+      }
+    }
+    console.log(`홀수 합 = ${sumOdd}, 짝수 합 = ${sumEven}`);
+    // end = new Date().getTime();
+    // console.log(`${end - start}ms`);
+
+    let numCount = 0;
+    // // start = new Date().getTime();
+    // for (let i = 12; i <= 50; i += 3) {
+    //   console.log(`${i}`);
+    //   numCount++;
+    // }
+    // // end = new Date().getTime();
+    // // console.log(`${end - start}ms`);
+
+    numCount = 0;
+    // start = new Date().getTime();
+    for (let i = 10; i <= 50; i++) {
+      if (i % 3 == 0) {
+        console.log(`${i}`);
+        numCount++;
+      }
+    }
+    console.log(`10부터 50까지 3의 배수의 수 = ${numCount}`);
+    // end = new Date().getTime();
+    // console.log(`${end - start}ms`);
+
+    for (let i = 10; i > 0; i--) {
+      console.log(`${i}`);
+    }
+
+    let fact = 1;
+    let str = "";
+    for (let i = 10; i > 0; i--) {
+      fact *= i;
+      str += i;
+      if (i > 1)
+        str += " * ";
+    }
+    console.log(`10! = ${fact}`);
+    str += " = " + fact;
+    console.log(`${str}`);
+
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+      stars = "";
+      for (let j = 1; j <= i; j++) {
+        stars += "*";
+      }
+      console.log(stars);
+    }
+
+    for (let i = 1; i <= 3; i++) {
+      console.log(`i = ${i}`);
+      for (let j = 1; j <= 4; j++) {
+        console.log(`⩌⩊⩌ j = ${j}`);
+      }
+    }
+    */
+
+    for (let i = 2; i <= 9; i++) {
+      // console.log(`${i}단 ⩌⩊⩌`);
+      document.write(`<div><span class="bold">${i}단 ⩌⩊⩌</span><br>`);
+      for (let j = 1; j <= 9; j++) {
+        // console.log(`${i} x ${j} = ${i * j}`);
+        document.write(`${i} x ${j} = ${i * j}<br>`);
+      }
+      document.write(`</div>`);
+    }
+
+    // Sol 1.
+    stars = "";
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5 - i; j++) {
+        stars += " ";
+      }
+      for (let j = 1; j <= i; j++) {
+        stars += "*";
+      }
+      stars += "\n"
+    }
+    console.log(stars);
+
+    document.write("<br>");
+
+    // Sol 2.
+    stars = "";
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        if (j <= 5 - i) {
+          stars += "-";
+        }
+        else {
+          stars += "*";
+        }
+      }
+      stars += "<br>"
+    }
+    document.write(stars);
+
+    // 다이아몬드 찍기
+    let line = 5;
+    let topLine = parseInt(line / 2) + 1;
+    let bottomLine = parseInt(line / 2);
+    stars = "";
+    for (let i = 1; i <= topLine; i++) {
+      for (let j = 1; j <= topLine - i; j++) {
+        stars += " ";
+      }
+      for (let j = 1; j <= i; j++) {
+        stars += "*";
+      }
+      for (let j = 1; j <= i - 1; j++) {
+        stars += "*";
+      }
+      stars += "\n";
+    }
+    for (let i = 1; i <= bottomLine; i++) {
+      for (let j = 1; j <= i; j++) {
+        stars += " ";
+      }
+      for (let j = 1; j <= bottomLine - i; j++) {
+        stars += "*";
+      }
+      for(let j = i; j <= bottomLine; j++) {
+        stars += "*";
+      }
+
+      stars += "\n";
+    }
+    console.log(stars);
+
+    document.write("<br>");
+
+    let enterNum = Number(prompt("입장객 수를 입력하세요."));
+    let colNum = Number(prompt("한 줄에 앉을 사람 수를 입력하세요."));
+
+    let lastRow = enterNum % colNum; // 마지막줄에 앉을 사람 수 (0이면 가득 찬다는 뜻)
+    let rowNum = (lastRow == 0) ? parseInt(enterNum / colNum) : parseInt(enterNum / colNum) + 1;
+
+    // lastRow = (lastRow == 0) ? colNum : lastRow;
+
+    document.write(`<table>`);
+    let seatCount = 1;
+    for (let i = 0; i < rowNum; i++) {
+      document.write(`<tr>`);
+      // if (i < rowNum - 1) {
+        for (let j = 0; j < colNum && seatCount <= enterNum; j++) {
+          document.write(`<td>좌석 ${seatCount}</td>`);
+          seatCount++;
+        }
+      // }
+      // else {
+      //   for (let j = 0; j < lastRow; j++) {
+      //     document.write(`<td>좌석 ${seatCount}</td>`);
+      //     seatCount++;
+      //   }
+      // }
+      document.write(`</tr>`);
+    }
+    document.write(`</table>`);
+
+
+    /*
+
+    특정 조건을 만족하는 동안 실행
+    while (조건삭) {
+      실행문
+    }
+    
+    무조건 1번 실행한 후 조건을 만족하는 동안 실행
+    do {
+      실행문
+    } while (조건식);
+    */
+
+    // 1에서 n까지의 합이 200을 넘는 순간의 n값 구하기
+    let n = 1;
+    let nSum = 0;
+    while (nSum <= 200) {
+      nSum += n++;
+    }
+    console.log(`합이 200을 넘는 순간의 n은 ${--n}이고 합은 ${nSum}`);
+
+  </script>
+</body>
+</html>

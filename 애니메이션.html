@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    #myball {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      /* border: 2px solid red; */
+      background:url(img/야구공.png);
+      background-size: 100px 100px;
+      animation-name:myani;
+      animation-duration: 0.75s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+
+    @keyframes myani {
+      0% {
+        top:10px;
+        left: 0%;
+        transform: perspective(100px) rotateZ(0deg);
+      }      
+      20% {
+        left:100%;
+        top:100px;
+        transform: perspective(100px) rotateZ(180deg);
+      }
+      40% {
+        left: 0%;
+        top:200px;
+        /* border-radius:50px; */
+        /* border:2px solid blue; */
+        /* background: url(img/바다즐기기.jpg); */
+        transform: perspective(100px) rotateZ(180deg);
+      }
+      60% {
+        left:100%;
+        top:300px;
+        transform: perspective(100px) rotateZ(180deg);
+      }
+      80% {
+        left: 0%;
+        top:400px;
+        transform: perspective(100px) rotateZ(180deg);
+      }
+      100% {
+        left:100%;
+        top:500px;
+        transform: perspective(100px) rotateZ(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="myball"></div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&display=swap');
+
+#container {
+  border: 1px solid gray;
+  padding: 20px;
+  width: 600px;
+  margin: 0px auto;
+  /*화면 가운데에 컨테이너 배치*/
+  font-family: "Nanum Gothic Coding", serif;
+}
+
+header {
+  border: 1px solid #000000;
+  padding: 10px;
+  font-family: "Nanum Pen Script", serif;
+  font-size: 24px;
+}
+
+header h1 {
+  font-size: 48px;
+  font-style: italic;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.185);
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  text-shadow: 2px 3px 1px #0000FF;
+  text-decoration: none;
+  box-shadow: 2px 2px 20px 5px #FFFF55 inset;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+/* header p{
+  text-decoration: underline;
+} */
+
+nav {
+  background-color: rgb(204, 255, 189);
+  color: darkblue;
+  padding: 10px;
+  line-height: 1.75;
+}
+
+nav ul {
+  /* list-style-type: disc;
+  text-align: center;
+  list-style-position: inside; */
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  border-bottom: 2px solid #000000;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+main {
+  background-color: rgb(254, 255, 176);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+section {
+  border: 1px solid rgb(104, 104, 104);
+  padding: 10px;
+  margin: 5px;
+  background-color: rgb(244, 255, 226);
+}
+
+section p {
+  /* text-transform: uppercase; */
+  /* text-transform: lowercase; */
+  text-transform: none;
+}
+
+pre {
+  font-family: 'NanumGiBbeumBarkEum';
+  font-size: 20px;
+}
+
+/* table.yoan{
+    border: 1px solid #000000;
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: separate;
+    text-align: center;
+  }
+  .yoan thead, .yoan tfoot{
+    background-color: rgb(201, 201, 201);
+  } */
+
+.bg {
+  background-color: #e5f6f6;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+table {
+  border: 2px solid #000000;
+  border-collapse: collapse;
+  /* border-spacing: 10px; */
+}
+
+table caption {
+  caption-side: bottom;
+  text-align: right;
+}
+
+th,
+td {
+  border: 1px dotted #ff0000;
+  padding: 10px;
+}
+
+thead {
+  background-color: gainsboro;
+}
+/* 
+tbody {
+  background-color: white;
+} */
+
+tfoot {
+  background-color: beige;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+figure img {
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px 3px #FFCC11;
+  margin-right: 20px;
+  /* display: none; */
+}
+
+figure figcaption {
+  padding-left: 80px;
+  padding-top: 10px;
+}
+
+aside {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+footer {
+  background-color: rgba(186, 255, 255, 0.521);
+  padding: 10px;
+}

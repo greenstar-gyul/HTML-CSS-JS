@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&display=swap');
+
+#container {
+  border: 1px solid #ccc;
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+  /* font-family: "Nanum Pen Script";
+  font-size: 22px; */
+  font-family: 'NanumGgocNaeEum';
+  font-size: 24px;
+}
+
+header {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#left, #right {
+  border: 1px solid #ccc;
+  width: 220px;
+  padding: 20px;
+  float: left;
+  margin-bottom: 20px;
+  background-color: azure;
+}
+
+section {
+  border: 1px solid #ccc;
+  width: 384px;
+  padding: 20px;
+  float: left;
+  margin: 0 5px 20px 5px;
+}
+
+/* #right {
+  border: 1px solid #ccc;
+  width: 220px;
+  padding: 20px;
+  float: right;
+  margin-bottom: 20px;
+  background-color: azure;
+} */
+
+footer {
+  border: 1px solid #ccc;
+  clear: both;
+  padding: 10px;
+}
+
+.green {
+  color: green;
+}

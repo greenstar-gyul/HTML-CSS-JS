@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&display=swap');
+
+#container {
+  width: 1000px;
+  margin: 0 auto;
+  /* font-family: "Nanum Pen Script", serif; */
+  /* font-family: 'NanumGothic'; */
+  /* font-family: 'NanumSquareRound'; */
+}
+
+header {
+  background-color: rgb(196, 157, 113);
+  padding: 10px;
+  overflow: hidden;
+  /*****************************************************
+  부모의 영역이 없을 때, float로 떨어진 자식을 붙잡는 역할
+  부모의 역역이 있을 때, 부모의 영역을 벗어난 자식을 숨김
+  *****************************************************/
+  font-family: 'NanumSquareRoundBold';
+}
+
+header img {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  font-family: 'NanumGothic';
+}
+
+section {
+  width: 800px;
+  float: left;
+}
+
+article {
+  width: 368px;
+  height: 250px;
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin: 5px;
+  float: left;
+}
+
+aside {
+  width: 180px;
+  float: right;
+}
+
+aside figure {
+  margin: 0px;
+  margin-top: 77px;
+}
+
+aside img {
+  width: 180px;
+  height: 180px;
+}
+
+footer {
+  background-color: rgb(196, 157, 113);
+  clear: both;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Nanum Pen Script", serif;
+  font-size:22px
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>체크리스트</title>
+    <link href="css/도서목록.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h2> 권장 도서 목록</h2>
+      <form name="bookInfo">
+        <input type="text" id="book" name="book" autofocus>
+        <button type="button" id="add" name="add" class="addBtn" >추가</button>
+      </form>
+      <div id="bookList"></div>
+    </div>
+    <!-- <script src="js/도서목록.js"></script> -->
+    <script>
+      // 입력창, 추가버튼, 요소 추가 구역 가져오기
+      let bookBox = document.querySelector("#book");
+      let addBtn = document.querySelector("#add");
+      let bookList = document.querySelector("#bookList");
+      
+      let books = [];
+
+      // 추가버튼 클릭 이벤트
+      addBtn.onclick = () => {
+        let bookTitle = bookBox.value;
+        
+        if (bookTitle == "") {
+          alert("책 제목을 입력해주세요.");
+          return;
+        }
+        
+        if (books.indexOf(bookTitle) != -1) {
+          alert("중복된 책제목입니다.");
+          return;
+        }
+        
+        books.push(bookTitle);
+
+        printBookList();
+
+        bookBox.value = "";
+        bookBox.focus();
+      }
+
+      // 책 목록 그리기
+      function printBookList() {
+        let blist = "<ul>";
+        
+        books.forEach((book, i) => {
+          blist += `<li>${book}<span class="del" id=${i}>삭제</span></li>`;
+        });
+        blist += "</ul>";
+        bookList.innerHTML = blist;
+
+        let delBtns = document.querySelectorAll(".del");
+        for (let delb of delBtns) {
+          delb.onclick = removeBook;
+        }
+      }
+
+      // 책 삭제하기
+      function removeBook() {
+        let bookId = this.id;
+        books.splice(bookId, 1);
+        printBookList();
+      }
+
+
+    </script>
+  </body>
+</html>

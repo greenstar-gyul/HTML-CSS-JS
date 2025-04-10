@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js기초</title>
+</head>
+
+<body>
+  <h1>자바스크립트 기초</h1>
+  <script>
+    // 출력
+    // 웹 문서에 출력
+    document.write("<h3>안녕, 자바스크립트!</h3>");
+    // 콘솔창에 출력
+    console.log("안녕, 자바스크립트!");
+    // 알림창에 출력
+    alert("안녕, 자바스크립트!");
+
+    // 입력창
+    let name = prompt("이름을 입력하세요.", "Gyul");
+    alert("안녕! 어서와! " + name);
+
+    // 확인창
+    let check = confirm("정말??");
+    console.log("수락여부: " + check);
+
+    // 변수선언
+    // 사각형의 넓이
+    let width = 100;
+    let height = 5;
+    let result = width * height;
+    console.log("사각형의\n넓이 = " + result);
+    console.log("사각형의 가로\t" + width + " \t높이\t" + height + "\n넓이 = " + result);
+    console.log(`사각형의 가로 : ${width}, 세로 : ${height}, 넓이 : ${result}`);
+
+    console.log("내 이름은 \"" + name + "\" 입니다.");
+
+    let age;
+    console.log("내 나이는 " + age + "살");
+
+    console.log(`내 이름은 ${name}이고, 나이는 ${age}살이야.`);
+
+  </script>
+</body>
+
+</html>

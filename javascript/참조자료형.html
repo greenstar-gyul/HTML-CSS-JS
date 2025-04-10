@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>참조자료형</title>
+</head>
+<body>
+  <h1>참조자료형</h1>
+  <h1>"⁀⩌⁀"</h1>
+  <script>
+    /*
+    * 참조자료형(or 복합자료형)
+    * 기억공간(메모리)에 데이터의 주소가 저장되어있는 자료형
+    * 데이터는 힙 영역에 저장
+    * 배열 : 하나의 변수에 여러 개의 데이터를 저장할 수 있는 자료형
+    *       데이터에 접근하기 위해서는 index 번호(0, 1, 2, ...)로 접근
+    */
+    let seasons = ["봄", "여름", "가을", "겨울"];
+    console.log(seasons);
+    console.log(seasons[2]);
+    console.log(`배열의 크기는 ${seasons.length}`);
+
+    console.log(`for \t\t "⁀⩌⁀"`)
+    for (let i = 0; i < seasons.length; i++) {
+      console.log(seasons[i]);
+    }
+    
+    console.log(`for in \t\t "⁀⩌⁀"`);
+    
+    for (let i in seasons) {
+      console.log(seasons[i]);
+    }
+
+    console.log(`for of \t\t "⁀⩌⁀"`);
+
+    for (const season of seasons) {
+      console.log(season);
+    }
+
+    console.log(`for each \t "⁀⩌⁀"`);
+
+    seasons.forEach((season, i) => console.log(`${i} : ${season}`));
+
+    // 배열 요소 삽임
+    let colors = [ "orange", "yellow", "mandarin"];
+    // console.log(colors);
+    colors.push('yellowgreen', 'aquamarine');
+    // console.log(colors);
+    colors.unshift('red', 'gold');
+    // console.log(colors);
+    
+    // 배열 요소 제거
+    // colors.pop();
+    // console.log(colors);
+    // let color = colors.shift();
+    // console.log(color);
+    
+    // delete gold & orange and inser lightred & sunset
+    console.log(`수정 전 : [${colors.join(', ')}]`);
+    colors.splice(1, 2, 'lightred', 'sunset');
+    console.log(`수정 후 : [${colors.join(', ')}]`);
+    
+    // slice lightred & sunset
+    let myColors = colors.slice(1,3);
+    console.log(`myColors : [${myColors.join(', ')}]`);
+    console.log(`colors : [${colors.join(', ')}]`);
+
+    // map() ==> 필요한 연산을 수행한 후 새로운 배열을 생성
+    let nums1 = [ 1, 2, 31, 7, -24, 5, -19 ];
+    let nums2 = nums1.map((num) => num * num);
+
+    console.log(nums1);
+    console.log(nums2);
+    
+    // filter() ==> 조건을 만족하는 요소만 추출한 후 새로운 배열 생성
+    let nums3 = nums1.filter((num) => num < 3);
+    console.log(nums3);
+
+    // reduce()
+    let hap = nums1.reduce((pre, post) => pre + post);
+    console.log(hap);
+    nums1.push(hap);
+
+    console.log(`ㅋ`);
+    console.log(nums1);
+
+    hap = 0;
+    let min = nums1[0];
+    let max = nums1[0];
+
+    nums1.forEach((num) => {
+       hap += num;
+       if (num < min) min = num; 
+       if (num > max) max = num;
+    });
+    
+    console.log(`합 = ${hap}\n최소값 = ${min}\n최대값 = ${max}`);
+    
+    // let min = nums1.reduce((a, b) => a > b ? b : a, 99999);
+    // console.log(min);
+
+    // let max = nums1.reduce((a, b) => a < b ? b : a, 0);
+    // console.log(max);
+
+    // sort() ==> ASCII 코드값 기준으로 오름차순 정렬
+    // 1. 문자열 정렬
+    // 1-1. 문자열 오름차순 정렬
+    console.log(`오름차순 정렬 \t "⁀⩌⁀"`);
+    console.log(`${colors.sort().join(', ')}`);
+    // 1-1. 문자열 내림차순 정렬
+    console.log(`내림차순 정렬 \t "⁀⩌⁀"`);
+    console.log(`${colors.sort().reverse().join(', ')}`);
+    
+    // 2. 숫자 정렬
+    // 2-1. 숫자 오름차순 정렬
+    console.log(`오름차순 정렬 \t "⁀⩌⁀"`);
+    console.log(`${nums1.sort((n1, n2) => n1 - n2).join(', ')}`);
+    
+    // 2-2. 숫자 오름차순 정렬
+    console.log(`내림차순 정렬 \t "⁀⩌⁀"`);
+    console.log(`${nums1.sort((n1, n2) => n2 - n1).join(', ')}`);
+
+    /*
+    * 객체는 키(key) : 값(value)의 형태로 저장
+    * 객체는 다양한 타입의 자료가 함께 저장(데이터-프로퍼티, 기능-메소드)
+    */
+
+    let person = {
+      name : "홍길동",                    // 프로퍼티
+      age : 25,                          // 프로퍼티
+      eat : function(food) {
+        console.log(`${food} 맛있다.`);
+      }                                 // 메소드
+    };
+
+    console.log(person);
+    console.log(person.name);           // 값에 접근하기 위햇는 키 입력
+    console.log(person.age);
+    console.log(person.eat("콜드브루"));
+    console.log(person.eat("아이스크림"));
+    console.log(person.eat);
+  </script>
+</body>
+</html>

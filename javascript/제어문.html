@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제어문</title>
+</head>
+<body>
+  <h1>제어문</h1>
+  <script>
+    /*
+    제어문 : 조건에 따라 프로그램의 순서를 제어할 수 있는 문장
+    if (조건) {
+      참일 때 실행문
+    }
+    else if (조건) {
+      참일 때 실행문
+    }
+    else {
+      거짓일 때 실행문
+    }
+    */
+    let a = 0;
+
+    // a가 양수, 0, 음수 판별
+    if (a > 0) {
+      console.log(`${a}은(는) 양수입니다.`);
+    }
+    else if (a == 0) {
+      console.log(`${a}은(는) 0입니다.`);
+    }
+    else {
+      console.log(`${a}은(는) 음수입니다.`);
+    }
+    console.log(`종료`);
+    
+    // a가 홀수면 홀수, 짝수면 짝수 출력
+    a = 14;
+    if (a % 2 == 0) {
+      console.log(`${a}은(는) 짝수입니다.`);
+    }
+    else {
+      console.log(`${a}은(는) 홀수입니다.`);
+    }
+    
+    // a가 3의 배수이면 3의 배수, 아니면 종료 출력
+    // 3의 배수라면 각 자릿수 합은 3의 배수임 ㅋㅋ
+    a = 527841;
+    if (a % 3 == 0) {
+      console.log(`${a}은(는) 3의 배수입니다.`);
+    }
+    else {
+      console.log(`종료`);
+    }
+
+    // a가 3의 배수이면서 6의 배수이면 둘 다 만족을,
+    // 아니면 불만족을 출력
+    a = 81251346;
+    if (a % 3 == 0 && a % 6 == 0) {
+      console.log(`${a}은(는) 둘 다 만족`);
+    }
+    else {
+      console.log(`${a}은(는) 불만족`);
+    }
+
+    // a가 3의 배수이거나 6의 배수이면 둘 중 하나 이상 만족을,
+    // 아니면 둘 다 불만족을 출력
+    a = 19633254321;
+    if (a % 3 == 0 || a % 6 == 0) {
+      console.log(`${a}은(는) 둘 중 하나 이상 만족`);
+    }
+    else {
+      console.log(`${a}은(는) 둘 다 불만족`);
+    }
+
+    // 점수가 
+    // 90점 이상이면 A
+    // 80점 이상이면 B
+    // 70점 이상이면 C
+    // 60점 이상이면 D
+    // 60점 미만이면 F
+    let score = 35;
+    if (score >= 90) {
+      console.log(`${score}점 : A`);
+    }
+    else if (score >= 80) {
+      console.log(`${score}점 : B`);
+    }
+    else if (score >= 70) {
+      console.log(`${score}점 : C`);
+    }
+    else if (score >= 60) {
+      console.log(`${score}점 : D`);
+    }
+    else {
+      console.log(`${score}점 : F`);
+    }
+
+    // 수를 입력받아 
+    // 입력되지 않았으면 '입력 취소'를,
+    // 입력되었다면 홀짝 구별
+    let num = prompt("수 입력");
+    if (num == null) {
+      console.log(`입력 취소됨`);
+    }
+    else if (num % 2 == 0) {
+      console.log(`${num}은(는) 짝수`);
+    }
+    else {
+      console.log(`${num}은(는) 홀수`);
+    }
+
+    // 국어 영어 수학 점수를 받아 평균을 구하고 점수 구분
+    let kor = Number(prompt("국어 점수 입력"));
+    let math = Number(prompt("수학 점수 입력"));
+    let eng = Number(prompt("영어 점수 입력"));
+    // let avg = (kor + eng + math) / 3;
+    let avg = parseInt((kor + eng + math) / 3);
+    let grade = "";
+    /*
+    if (avg >= 90) {
+      grade = "A";
+    }
+    else if (avg >= 80) {
+      grade = "B";
+    }
+    else if (avg >= 70) {
+      grade = "C";
+    }
+    else if (avg >= 60) {
+      grade = "D";
+    }
+    else {
+      grade = "F";
+    }
+    */
+    switch (parseInt(avg / 10)) {
+      case 10:
+      case 9:
+        grade = "A";
+        break;
+      case 8:
+        grade = "B";
+        break;
+      case 7:
+        grade = "C";
+        break;
+      case 6:
+        grade = "D";
+        break;
+      default:
+        grade = "F";
+    }
+    console.log(`국어 ${kor}점, 수학 ${math}점, 영어 ${eng}점, 평균 ${avg}점 : ${grade}`);
+
+    // 삼항연산자
+    // (조건) ? (참일 경우 실행문) : (거짓일 경우 실행문)
+
+    num = 9890;
+    (num % 2 == 0) ? alert(`${num} : 짝수`) : alert(`${num} : 홀수`);
+
+
+    // 입력된 값이 
+    // A, a => vip 회원
+    // B, b => 일반회원
+    // C, c => 신입회원
+    // 그 외 => 손님
+    let rank = "abc";
+    switch (rank) {
+      case "A":
+      case "a":
+        console.log("VIP");
+        break;
+      case "B":
+      case "b":
+        console.log("일반회원");
+        break;
+      case "C":
+      case "c":
+        console.log("신입회원");
+        break;
+      default:
+        console.log("손님");
+    }
+
+    let day = "fdsaf337";
+    switch (day % 7) {
+      case 0:
+        console.log("일요일");
+        break;
+      case 1:
+        console.log("월요일");
+        break;
+      case 2:
+        console.log("화요일");
+        break;
+      case 3:
+        console.log("수요일");
+        break;
+      case 4:
+        console.log("목요일");
+        break;
+      case 5:
+        console.log("금요일");
+        break;
+      case 6:
+        console.log("토요일");
+        break;
+      default:
+        console.log("입력 오류");
+    }
+
+    let user_age = 19;
+    (user_age >= 18) ? console.log(`${user_age}세 판매 가능!`) : console.log(`${user_age}세 판매 불가!`);
+
+    // let test = 1;
+    // console.log(`${typeof(test)}`);
+    // test = "문";
+    // console.log(`${typeof(test)}`);
+    // test = [ 1, 2, 3 ];
+    // console.log(`${typeof(test)}`);
+    // test = { "abc" : 123 };
+    // console.log(`${typeof(test)}`);
+    // // JS는 변수의 자료형이 고정이 아니네?!
+
+  </script>
+</body>
+</html>

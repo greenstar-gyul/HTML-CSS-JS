@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>내용입력</title>
+  <link href="./css/내용입력.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumGiBbeumBarkEum.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>⚾Ham Dongui</h1>
+      <hr>
+      <p>💦저의 페이지를 찾아주셔서 감사합니다(｡･∀･)ﾉﾞ</p>
+    </header>
+    <nav id="top">
+      <ul>
+        <li><i class="fa-solid fa-house" style="color: darkblue;"></i> <a href="#web">웹개발 기초</a></li>
+        <li><i class="fa-solid fa-list" style="color: darkblue;"></i> <a href="#list">목록 만들기</a></li>
+        <li><i class="fa-solid fa-table" style="color: darkblue;"></i> <a href="#table">표 만들기</a></li>
+        <li><i class="fa-solid fa-image" style="color: darkblue;"></i> <a href="#image">이미지 삽입</a></li>
+        <li><i class="fa-solid fa-link" style="color: darkblue;"></i> <a href="#link">링크 걸기</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h3 id="web">웹개발 기초</h3>
+        <cite><b>교재 : HTML + CSS + JAVASCRIPT 저자 : 고경희</b></cite>
+        <article>
+          <p><b>html</b> : 웹 페이지의 내용 작성</p>
+          <p><i><strong><mark>Lorem ipsum</mark></strong> dolor</i>,<br> sit amet consectetur adipisicing elit. Quae
+            perspiciatis aspernatur sunt dolore esse tenetur laudantium quo veritatis porro veniam explicabo laborum
+            omnis minus, tempora iure recusandae earum iusto fugit.</p>
+          <pre>
+              pre : 입력한 그대로 표시
+              Lorem, ipsum dolor sit amet 
+              consectetur adipisicing elit. 
+              Voluptatum, cupiditate.
+            </pre>
+        </article>
+        <article>
+          <p><b>css</b> : 웹 페이지의 디자인 담당</p>
+          <p><strong>Lorem</strong> ipsum dolor sit amet
+            <small><span style="color:#FF0000">consectetur adipisicing elit. </span></small>
+            Iure, non!
+          </p>
+          <blockquote cite="www.naver.com"><q><em><b>Lorem ipsum</b></em></q> dolor sit amet consectetur adipisicing
+            elit.
+            A reprehenderit laudantium deleniti, nulla laboriosam veritatis dolore sapiente facilis enim ducimus.
+          </blockquote>
+        </article>
+      </section>
+      <p><a href="#top">처음으로</a></p>
+      <section>
+        <h3 id="list">목록 만들기</h3>
+        <h4>코끼리 냉장고에 넣기</h4>
+        <ol type="i" start="3">
+          <li>냉장고 문을 연다</li>
+          <li>코끼리를 넣는다</li>
+          <li>냉장고 문을 닫는다</li>
+        </ol>
+        <h4>여행 준비물</h4>
+        <ul>
+          <li>여권</li>
+          <li>세면도구</li>
+          <li>돈 등등..</li>
+        </ul>
+        <!-- <table class="yoan"> -->
+        <table>
+          <caption>요안도라 객실</caption>
+          <colgroup>
+            <col class="bg-white">
+            <col class="bg-white">
+            <col class="bg-white">
+            <col class="bg">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>방 이름</th>
+              <th>대상</th>
+              <th>크기</th>
+              <th>가격</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>유채방</td>
+              <td>여성 도미토리</td>
+              <td rowspan="3">4인실</td>
+              <td rowspan="4">1인 20,000원</td>
+            </tr>
+            <tr>
+              <td rowspan="2">동백방</td>
+              <td>동성 도미토리</td>
+            </tr>
+            <tr>
+              <td>가족 1팀</td>
+            </tr>
+            <tr>
+              <td>천혜향방</td>
+              <td>-</td>
+              <td>2인실</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">바깥채 전체를 렌트합니다</td>
+            </tr>
+          </tfoot>
+        </table>
+        <h4>상품 구성</h4>
+        <dl>
+          <dt>선물용 <small>3kg</small></dt>
+          <dd>소과 13~16과</dd>
+          <dd>중과 10~12과</dd>
+          <dt>선물용 <small>5kg</small></dt>
+          <dd>중과 15~19과</dd>
+        </dl>
+        <p><a href="#top">처음으로</a></p>
+        <h3 id="table">표 만들기</h3>
+        <table>
+          <caption>선물용과 가정용 상품 구성</caption>
+          <colgroup>
+            <col style="background-color: rgb(184, 255, 231);">
+            <col style="background-color: rgb(213, 255, 255);">
+            <col span="2" style="background-color: rgb(168, 255, 255);">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>용도</th>
+              <th>중량</th>
+              <th>개수</th>
+              <th>가격</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">선물용</td>
+              <td>3kg</td>
+              <td>11~16과</td>
+              <td>35,000원</td>
+            </tr>
+            <tr>
+              <!-- <td>선물용</td> -->
+              <!-- 주석: 웹 브라우저가 해석하지 않음. 영역의 설명을 표시 -->
+              <td>5kg</td>
+              <td>18~26과</td>
+              <td>52,000원</td>
+            </tr>
+            <tr>
+              <td rowspan="2">가정용</td>
+              <td>3kg</td>
+              <td>11~16과</td>
+              <td>30,000원</td>
+            </tr>
+            <tr>
+              <!-- <td>가정용</td> -->
+              <td>5kg</td>
+              <td>18~26과</td>
+              <td>47,000원</td>
+            </tr>
+          <tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">판매시점에 따라 가격이 변동될 수 있습니다</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <section>
+        <h3>동적 페이지</h3>
+        <p><b>javascript</b> : 사용자의 동작에 반응하는 이벤트 작성</p>
+      </section>
+      <p><a href="#top">처음으로</a></p>
+      <section>
+        <h3 id="image">이미지 삽입</h3>
+        <img src="./img/레드향.jpg" alt="레드향" width="20%" height="20%" title="레드향">
+        <img src="./img/레드향.jpg" alt="레드향" width="20%" height="20%" title="레드향">
+        <img src="./img/레드향.jpg" alt="레드향" width="20%" height="20%" title="레드향">
+        <figure>
+          <img src="./img/레드향.jpg" alt="레드향">
+          <img src="./img/레드향.jpg" alt="레드향">
+          <img src="./img/레드향.jpg" alt="레드향">
+          <figcaption>기분이 상쾌해지는 이미지</figcaption>
+        </figure>
+        <h3>외부 파일 삽입</h3>
+        <object data="./img/2-1.과제(html작성).pdf" width="500" height='600'></object>
+        <object data="./레드향.html" width="500" height='600'></object>
+        <iframe src="./img/2-1.과제(html작성).pdf" width="500" height="600"></iframe>
+        <h3>오디오 파일 삽입</h3>
+        <audio src="./media/미소속에비친그대.mp3" controls></audio>
+        <h3>비디오 파일 삽입</h3>
+        <video src="./media/사랑한다사랑해.mp4" controls width="480" height="270" autoplay muted></video>
+        <h3>유튜브 영상 삽입</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4pRC24eS4JU?si=oWqX1XXsxJqrQCQh"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p><a href="#top">처음으로</a></p>
+        <h3 id="link">링크 걸기</h3>
+        <a href="https://www.naver.com/" title="네이버로 이동" target="_blank">검색 사이트</a>
+        <a href="지원양식.html" target="_blank">지원서 작성</a>
+        <a href="./img/2-1.과제(html작성).pdf" download>파일 다운로드</a>
+        <a href="./img/레드향.jpg" download title="이미지 다운로드"><img src="img/레드향.jpg" alt="레드향" width="50" height="50"></a>
+      </section>
+      <p><a href="#top">처음으로</a></p>
+    </main>
+    <aside>
+      <h3>광고</h3>
+      <h4><ruby>學習<rt>학습</rt></ruby></h4>
+      <h5><abbr title="시트에 엉덩이 뜨겁게">엉뜨</abbr></h5>
+      <h3>물의 화학식은 H<sub>2</sub>O에용~~~</h3>
+      <h3>함수식 : y = x<sup>2</sup> + b</h3>
+      <p>본문 내용과 상관없는 내용 작성</p>
+    </aside>
+    <footer>
+      <p>개인정보보호방침</p>
+      <p>제작자 주소, 전화번호</p>
+      <p>SNS 연결</p>
+    </footer>
+  </div>
+</body>
+
+</html>

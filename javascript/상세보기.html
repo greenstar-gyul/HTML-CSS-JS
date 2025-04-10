@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세보기</title>
+  <style>
+    #container {
+      width: 400px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+    }
+    #desc {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>상세보기</h1>
+    <img src="../img/바다즐기기.jpg" alt="바다">
+    <button type="button" id="open">상세설명 보기</button>
+    <div id="desc">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque iure fugit modi, tempore tempora earum unde
+        saepe nostrum? Repellat laborum veritatis iusto provident voluptas ratione impedit explicabo amet ullam quam!
+      </p>
+      <button type="button" id="close">상세설명 닫기</button>
+    </div>
+  </div>
+  <script>
+    let openBtn = document.querySelector("#open");
+    let closeBtn = document.querySelector("#close");
+    let desc = document.querySelector("#desc");
+
+    openBtn.onclick = () => {
+      openBtn.style.display = "none";
+      desc.style.display = "block";
+    };
+
+    closeBtn.onclick = () => {
+      openBtn.style.display = "block";
+      desc.style.display = "none";
+    };
+
+
+  </script>
+</body>
+
+</html>

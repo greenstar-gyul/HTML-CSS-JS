@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&display=swap');
+
+#container {
+  width: 1000px;
+  margin: 0 auto;
+  /* font-family: "Nanum Pen Script", serif; */
+  /* font-family: 'NanumGothic'; */
+  /* font-family: 'NanumSquareRound'; */
+}
+
+header {
+  background-color: rgb(196, 157, 113);
+  text-align: right;
+  padding: 10px;
+  font-family: 'NanumSquareRoundBold';
+}
+
+nav li {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  border: 3px solid rgb(230, 201, 165);
+  font-family: 'NanumGothic';
+}
+
+section {
+  padding: 10px;
+}
+
+#top {
+  text-align: center;
+}
+
+#top li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+#top a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(122, 85, 29);
+}
+
+main article {
+  border: 3px dotted burlywood;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+
+main figure {
+  text-align: center;
+}
+
+main figure img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 1px 1px 5px 5px #999;
+  border: 3px solid white;
+}
+
+main p {
+  text-align: right;
+  margin-right: 20px;
+}
+
+main p a {
+  text-decoration: none;
+}
+
+#dog1, #dog2, #dog3 {
+  margin-left: 20px;
+}
+
+aside {
+  padding: 10px;
+  text-align: left;
+  background-color: rgb(255, 242, 223);
+}
+
+footer {
+  background-color: rgb(196, 157, 113);
+  padding: 10px;
+  font-family: "Nanum Pen Script", serif;
+  font-size:22px
+}
+
+footer p {
+  margin-top: 0px;
+  text-align: center;
+  color: white;
+}

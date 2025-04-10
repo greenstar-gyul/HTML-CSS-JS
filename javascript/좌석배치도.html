@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자리배치도</title>
+  <style>
+    table, tr, td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>자리배치도</h1>
+  <script>
+    let enterNum = prompt("입장객 수");
+    let colNum = prompt("한 줄에 앉을 사람 수");
+    let rowNum = (enterNum % colNum == 0) ? enterNum / colNum : enterNum / colNum + 1;
+    let seatCount = 1;
+    let seat = "<table>";
+    
+    for (let i = 0; i < rowNum; i++) {
+      seat += "<tr>";
+      for (let j = 0; j < colNum && seatCount <= enterNum; j++) {
+        seat += `<td>좌석 ${seatCount++}</td>`;
+      }
+      seat += "</tr>";
+    }
+    seat += "</table>";
+    document.write(seat);
+
+    document.write(`
+      (._.) (⩂_⩂) (⩌⩊⩌) (>⩌<) (∘⩊∘) ())
+      
+      (◜◡◝)
+
+      (。_。)
+      ( ⫗ )
+    `)
+
+    /*
+    
+     ⩍⁔⩍
+    (._.)
+    (⫗)
+    ⩂‾⩂
+    
+    */
+
+  </script>
+</body>
+</html>

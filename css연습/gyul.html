@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyul</title>
+  <link href="./css/gyul.css" rel="stylesheet">
+  <style>
+    /* input:enabled {
+      background-color: red;
+    } */
+    p::first-letter {
+      font-size: 24px;
+      background-color: lavender;
+      padding: 5px;
+    } 
+    
+    p::first-line {
+      color:cornflowerblue;
+    }
+
+    h1::before {
+      content: "🍳";
+      margin-right: 10px;
+    }
+    h1::after {
+      content: "긴급!!!";
+      background-color: red;
+      color: white;
+      font-size: 20px;
+      margin-left: 10px;
+      position: relative;
+      top: -15px;
+    }
+    ::selection {
+      background-color: lemonchiffon;
+      color: thistle;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>Gyul 페이지에 온 것을 환영합니다.</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos excepturi tempore, accusamus ex at facilis
+        deleniti ullam dolor non, beatae corporis sint iure id dolorum natus cupiditate aspernatur enim blanditiis?</p>
+      <nav>
+        <ul>
+          <li><a href="#">메인메뉴</a></li>
+          <li><a href="#">메인메뉴</a></li>
+          <li><a href="#">메인메뉴</a></li>
+          <li class="float_right"><a href="#">공지사항</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="float_left">
+      <h2>좌측 사이드</h2>
+    </aside>
+    <main>
+      <section class="float_left">
+        <h2>회원가입 영역입니다</h2>
+        <article>
+          <form action="register.jsp" method="post" name="register">
+            <!-- <h3>개인정보 등록</h3> -->
+            <legend>개인정보 등록</legend>
+            <fieldset>
+              <ul>
+                <li>
+                  <label for="id">계정아이디</label>
+                  <input type="text" name="id" id="id" autofocus>
+                </li>
+                <li>
+                  <label for="pw">비밀번호</label>
+                  <input type="password" name="pw" id="pw">
+                </li>
+                <li>
+                  <label for="pwc">비밀번호 확인</label>
+                  <input type="password" name="pwc" id="pwc">
+                </li>
+                <li>
+                  <label for="name">이름</label>
+                  <input type="text" name="name" id="name" placeholder="5자 미만 공백없이" maxlength="4">
+                </li>
+                <li>
+                  <label for="tel">전화번호</label>
+                  <input type="tel" name="tel" id="tel" disabled>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <button type="submit">회원 가입</button>
+              <button type="reset">정보 수정</button>
+            </fieldset>
+          </form>
+        </article>
+      </section>
+    </main>
+    <aside class="float_right">
+      <h2>우측 사이드</h2>
+    </aside>
+    <footer class="footer">
+      <h2>푸터영역 입니다</h2>
+    </footer>
+  </div>
+</body>
+
+</html>

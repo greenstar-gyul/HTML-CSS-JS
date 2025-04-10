@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>문서구조</title>
+    <style>
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      header {
+        width: 100%;
+        background-color: #ccc;
+        padding: 10px;
+      }
+
+      nav {
+        background-color: wheat;
+        padding: 10px;
+      }
+
+      main {
+        width: 80%;
+        background-color: antiquewhite;
+        /* width: 400px; */
+        /* float: left; */
+      }
+
+      section {
+        display: flex;
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        justify-content: space-evenly;
+        background-color: lightgoldenrodyellow;
+      }
+
+      section h3 {
+        border: 1px solid rgb(0, 153, 153);
+        width: 20%;
+      }
+      section > h4 {
+        border: 1px solid rgb(153, 31, 0);
+        width: 30%;
+      }
+      section article {
+        border: 1px solid rgb(0, 80, 13);
+        width: 30%;
+      }
+
+      aside {
+        width: 20%;
+        background-color: beige;
+        /* float: right; */
+        /* width: 180px; */
+      }
+
+      footer {
+        width: 100%;
+        background-color: azure;
+        /* clear: both; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h4>header</h4>
+        <p>문서의 머리부분</p>
+        <p>회사로고, 검색창 작업부분</p>
+        <nav>
+          <h3>nav</h3>
+          <p>웹페이지에서 보여줄 정보를 항목별로 정리해둔 메인메뉴 영역</p>
+        </nav>
+      </header>
+      <main>
+        <h3>main</h3>
+        <p>중심 내용 표시</p>
+        <p>한 번만 사용할 수 있는 태그</p>
+        <section>
+          <h3>section</h3>
+          <h4>제목입력</h4>
+          <article>
+            <h4>article: 하나의 내용을 작업</h4>
+          </article>
+        </section>
+      </main>
+      <aside>
+        <h3>aside</h3>
+        <p>본문내용 이외의 광고나 링크 표시 영역</p>
+      </aside>
+      <footer>
+        <h3>footer</h3>
+        <p>제작자 정보, 개인정보 보호방침, SNS연결</p>
+      </footer>
+    </div>
+  </body>
+
+</html>

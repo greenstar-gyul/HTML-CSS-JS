@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼</title>
+  <style>
+    #container {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    fieldset {
+      margin-bottom: 10px;
+    }
+
+    form ul {
+      list-style: none;
+      padding: 0px;
+    }
+
+    form li {
+      padding: 5px;
+      /* background-color: #ccc; */
+      margin-bottom: 5px;
+    }
+
+    form label {
+      width: 100px;
+      /* display: inline-block; */
+      float: left;
+    }
+
+    .selection label {
+      float: none;
+      display: inline-block;
+    }
+
+    .selection input:checked+span {
+      color: red;
+      font-weight: bold;
+    }
+
+    .red {
+      color: #f00;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>폼 만들기</h1>
+    <form action="login.jsp" method="post" name="login">
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+          <li>
+            <label for="user_id">아이디 <span class="red">*</span></label>
+            <input type="text" id="user_id" name="user_id" required size="8" maxlength="3" autofocus>
+          </li>
+          <li>
+            <label for="user_pw">비밀번호 <span class="red">*</span></label>
+            <input type="password" id="user_pw" name="user_pw" required>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>자료체크</legend>
+        <ul>
+          <li>
+            <label for="url">홈페이지</label>
+            <input type="url" id="url" name="url" value="https://www.naver.com/" readonly>
+          </li>
+          <li>
+            <label for="email">메일주소</label>
+            <input type="email" id="email" name="email">
+          </li>
+          <li>
+            <label for="tel">전화번호</label>
+            <input type="tel" id="tel" name="tel" placeholder="-를 빼고 숫자만 입력하세요.">
+          </li>
+          <li>
+            <label for="search">검색</label>
+            <input type="search" id="search" name="search">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="selection">
+        <legend>자료선택</legend>
+        <ul>
+          <li>
+            <label>색상선택 :</label>
+            <label>
+              <input type="radio" name="color" value="red">
+              <span>빨강</span>
+            </label>
+            <label>
+              <input type="radio" name="color" value="blue" checked>
+              <span>파랑</span>
+            </label>
+            <label>
+              <input type="radio" name="color" value="green">
+              <span>초록</span>
+            </label>
+          </li>
+          <li>
+            <label>SNS :</label>
+            <label>
+              <input type="checkbox" name="sns" value="instagram" checked>
+              <span>인스타그램</span>
+            </label>
+            <label>
+              <input type="checkbox" name="sns" value="twitter">
+              <span>트위터</span>
+            </label>
+            <label>
+              <input type="checkbox" name="sns" value="facebook">
+              <span>페이스북</span>
+            </label>
+          </li>
+          <li>
+            <label for="file">파일전송</label>
+            <input type="file" name="file" id="file">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>숫자자료 입력</legend>
+        <ul>
+          <li>
+            <label for="number">스핀박스</label>
+            <input type="number" id="number" name="number" min="0" max="10" value="0" step="5"> 박스
+          </li>
+          <li>
+            <label for="slider">슬라이더</label>
+            <input type="range" id="slider" name="slider" min="0" max="10" value="0" step="5">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>날짜입력</legend>
+        <ul>
+          <li>
+            <label for="date">년월일</label>
+            <input type="date" name="date" id="date">
+          </li>
+          <li>
+            <label for="month">년월</label>
+            <input type="month" name="month" id="month">
+          </li>
+          <li>
+            <label for="week">주/년</label>
+            <input type="week" name="week" id="week">
+          </li>
+          <li>
+            <label for="time">시간</label>
+            <input type="time" name="time" id="time">
+          </li>
+          <li>
+            <label for="datetime">년월일시</label>
+            <input type="datetime-local" name="datetime" id="datetime">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>기타 태그</legend>
+        <ul>
+          <li>
+            <label for="memo">메모</label>
+            <textarea cols="60" rows="5" name="memo" id="memo" placeholder="지원동기를 간략히 작성하세요." readonly>공지사항
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur obcaecati minima animi nobis exercitationem recusandae ex dignissimos maxime qui nostrum inventore earum dicta dolores, cum distinctio cumque necessitatibus voluptate officia?
+            </textarea>
+          </li>
+          <li>
+            <label for="select">색상선택</label>
+            <select id="select">
+              <optgroup label="따뜻한 색">
+                <option value="red">빨강</option>
+                <option value="orange">주황</option>
+                <option value="yellow" selected>노랑</option>
+              </optgroup>
+              <optgroup label="차가운색">
+                <option value="blue">파랑</option>
+                <option value="dark_blue">남색</option>
+                <option value="purple">보라</option>
+              </optgroup>
+            </select>
+          </li>
+          <li>
+            <label for="data">색상선택</label>
+            <input type="text" name="data" id="data" list="colorlist">
+            <datalist id="colorlist">
+              <option value="pink">분홍</option>
+              <option value="gold">금빛</option>
+              <option value="sky">하늘</option>
+              <option value="yellowgreen">연두</option>
+            </datalist>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <ul>
+          <li>
+            <input type="submit" value="전송버튼">
+            <input type="reset" value="취소버튼">
+            <input type="button" value="창열기" onclick="window.open(URL='https://www.naver.com/')">
+          </li>
+          <li>
+            <button type="submit">전송버튼</button>
+            <button type="reset">취소버튼</button>
+            <button type="button" onclick="window.open(URL='https://www.naver.com/')">창열기</button>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

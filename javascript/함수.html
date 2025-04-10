@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+</head>
+<body>
+  <h1>함수</h1>
+  <script>
+    // 함수 : 특정 기능을 하는 명령 집합
+    
+    console.log(`합 = ${calcSum(10, 20)} (⩌⩊⩌)`);
+    
+    function calcSum(min, max) {
+      let sum = 0;
+      // for (let i = min; i <= max; i++) {
+        //   sum += i;
+        // }
+        
+        sum = (max + 1) * max / 2 - (min - 1) * min / 2;
+        return sum;
+      }
+      
+    // 함수 리터럴 => 익명함수 : 이름이 없는 함수 --> 변수에 저장해서 사용
+    const sumCalc = (num1, num2) => {
+      console.log(`${num1} + ${num2} = ${num1 + num2} (⩌⩊⩌)`);
+    }
+
+    // console.log(`합 = ${sumCalc(10, 20)} (⩌⩊⩌)`);
+    // console.log(`합 = ${sumCalc(1, 100)} (⩌⩊⩌)`);
+    // console.log(`합 = ${calcSum(1, 100)} (⩌⩊⩌)`);
+    sumCalc(100, 200);
+
+    // 콜백 함수 : 함수의 매개값으로 전달되는 함수
+    function order(coffee, callbackFnc) {
+      console.log(`(⩌⩊⩌)◜ ${coffee} 주문 접수`);
+      
+      setTimeout(() => {
+        callbackFnc(coffee);
+      }, 3000);
+    }
+
+    // // 선언함수
+    // function done(coffee) {
+    //   console.log(`◝(⩌⩊⩌)◜ ${coffee} 준비 완료`);
+    // }
+
+    // // 익명 함수
+    // let done = function(coffee) {
+    //   console.log(`◝(⩌⩊⩌)◜ ${coffee} 준비 완료`);
+    // }
+
+    // 화살표함수
+    let done = (coffee) => {
+      console.log(`◝(⩌⩊⩌)◜ ${coffee} 준비 완료`);
+    }
+
+    order("콜드브루", done);
+    sumCalc(100, 20);
+    console.log(`20부터 500까지 합 = ${calcSum(20, 500)} (⩌⩊⩌)`);
+
+    // 펼침연산자 (...)
+    function calc(x, y, ...rest) {
+      let sum = x + y;
+      for (let i = 0; i < rest.length; i++) sum += rest[i];
+      return sum;
+    }
+    let nums = [ 1, 2, 3, 4, 5 ];
+    console.log(`(⩌⩊⩌) : ${calc(...nums)}`);
+
+    var a = 10;
+    let b = 20;
+    
+    function test() {
+      let a = 30;
+    }
+
+    test();
+
+    // 즉시실행함수
+    let obj = (function(){
+      return function() {
+        console.log(`리턴된 함수`);
+      }
+    })();
+
+    console.log(obj);
+    obj();
+
+
+
+    // 구구단 출력 함수
+    // min단부터 max단까지 출력
+    const gugudan = (min, max) => {
+      let str = "";
+      for (let i = min; i <= max; i++) {
+        // console.log(`${i}단 (⩌⩊⩌)`);
+        str += `${i}단 (⩌⩊⩌)\n`;
+        for (let j = 1; j <= 9; j++) {
+          // console.log(`${i} x ${j} = ${i * j}`);
+          str += `${i} x ${j} = ${i * j}\n`;
+        }
+        // console.log(`\n`);
+        str += `\n`;
+      }
+
+      return str;
+    }
+
+    // let num1 = Number(prompt("시작단을 입력하세여"));
+    // let num2 = Number(prompt("마지막 단을 입력하세요"));
+    // console.log(gugudan(num1,num2));
+
+    const sungjuk = (name, kor, eng, math) => {
+      let sum = kor + eng + math;
+      let avg = Math.round(sum / 3);
+      let grade = "";
+      if (avg >= 90) {
+        grade = "A";
+      }
+      else if (avg >= 80) {
+        grade = "B";
+      }
+      else if (avg >= 70) {
+        grade = "C";
+      }
+      else if (avg >= 60) {
+        grade = "D";
+      }
+      else {
+        grade = "F";
+      }
+
+      return { 
+        "name": name,
+        "sum": sum,
+        "avg": avg,
+        "grade": grade
+      };
+    }
+
+    console.log(`이름 \t 총점 \t 평균 \t 성적`);
+    
+    // let result = sungjuk('aaa', 80, 75, 90);
+    // console.log(`${result['name']} \t ${result['sum']} \t ${result['avg']} \t ${result['grade']}`);
+    // result = sungjuk('bbb', 90, 88, 99);
+    // console.log(`${result['name']} \t ${result['sum']} \t ${result['avg']} \t ${result['grade']}`);
+    // result = sungjuk('ccc', 100, 85, 94);
+    // console.log(`${result['name']} \t ${result['sum']} \t ${result['avg']} \t ${result['grade']}`);
+
+    let results = [];
+    results.push(sungjuk('aaa', 80, 75, 90));
+    results.push(sungjuk('bbb', 90, 88, 99));
+    results.push(sungjuk('ccc', 100, 85, 94));
+
+    for (let i = 0; i < results.length; i++) {
+      console.log(`${results[i]['name']} \t ${results[i]['sum']} \t ${results[i]['avg']} \t ${results[i]['grade']}`);
+    }
+    
+    // for (let result of results) {
+    //   console.log(`${result['name']} \t ${result['sum']} \t ${result['avg']} \t ${result['grade']}`);
+    // }
+
+    // results.forEach((result) => console.log(`${result['name']} \t ${result['sum']} \t ${result['avg']} \t ${result['grade']}`));
+
+  </script>
+</body>
+</html>

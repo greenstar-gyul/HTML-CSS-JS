@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장객체</title>
+</head>
+<body>
+  <h1>내장객체</h1>
+  <h1>"⁀⩌⁀"</h1>
+  <h1>⩌_⩌</h1>
+  <script>
+    // 날짜 객체
+    let date = new Date();
+    console.log(date);
+
+    let xmas = new Date('2025-12-25');
+    console.log(xmas);
+
+    console.log(`${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`);
+
+    let day = '';
+    switch(xmas.getDay()) {
+      case 0:
+        day = "일요일";
+        break;
+      case 1:
+        day = "월요일";
+        break;
+      case 2:
+        day = "화요일";
+        break;
+      case 3:
+        day = "수요일";
+        break;
+      case 4:
+        day = "목요일";
+        break;
+      case 5:
+        day = "금요일";
+        break;
+      case 6:
+        day = "토요일";
+        break;
+    }
+
+    console.log(`${day}`);
+
+    console.log(`${date.toLocaleString()}`);
+
+    // 크리스마스까지 남은 일수
+    let days = xmas - date;
+    console.log(`크리스마스까지 ${Math.floor(days / 1000 / 60 / 60 / 24)}일 남음`);
+    
+    let firstDay = new Date('2025-2-7');
+    let passday = date - firstDay;
+    console.log(`첫날부터 ${Math.floor(passday / 1000 / 60 / 60 / 24)}일 지남`);
+
+    // 난수 만들기
+    let randomNumber = Math.floor(Math.random() * 81) + 20;
+    console.log(`생성된 난수 (⩌⩊⩌) : ${randomNumber}`);
+
+    // lotto
+    // let lottoNums = [];
+    let lottoNums = [];
+
+    for (let i = 0; i < 5; i++) {
+      let lottos = [];
+      let num = 0;
+      let count = 0;
+      while (count < 6) {
+        num = Math.floor(Math.random() * 45) + 1;
+        if (lottos.indexOf(num) < 0) {
+          lottos.push(num);
+          count++;
+        }
+      }
+      console.log(lottos.sort((n1, n2) => n1 - n2).join(" "));
+      lottoNums.push(lottos);
+    }
+
+    let winNums = [ 9, 21, 27, 29, 33, 37 ];
+    let bonusNum = 13;
+
+    let lottoResults = [];
+    lottoNums.forEach((lotto) => {
+      let correct = 0;
+      for (let num of winNums) {
+        if (lotto.indexOf(num) >= 0) {
+          correct++;
+        }
+      }
+      
+      switch(correct) {
+        case 6:
+          lottoResults.push(1);
+          console.log(`1등!!!!! ヾ(≧▽≦*)o`);
+          break;
+        case 5:
+          if (lotto.indexOf(bonusNum) >= 0) {
+            lottoResults.push(2);
+            console.log(`2등!!! "⁀⩌⁀"`);
+          }
+          else {
+            lottoResults.push(3);
+            console.log(`3등!! (～￣▽￣)～`);
+          }
+          break;
+        case 4:
+          lottoResults.push(4);
+          console.log(`4등! (⊙ˍ⊙)`);
+          break;
+        case 3:
+          lottoResults.push(5);
+          console.log(`5등 (。_。)`);
+          break;
+        default:
+          lottoResults.push(-1);
+          console.log(`낙첨 ⩌_⩌`);
+      }
+    });
+
+  </script>
+</body>
+</html>

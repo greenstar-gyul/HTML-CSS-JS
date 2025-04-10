@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리</title>
+    <style>
+      #container {
+        width: 700px;
+        margin: 20px auto;
+        display: grid;
+        gap: 5px;
+        grid-template-areas:
+          "red1 red1 red2"
+          "red1 red1 red3"
+          "red4 red5 red6";
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .red1 {
+        grid-area: red1;
+      }
+
+      .red2 {
+        grid-area: red2;
+      }
+
+      .red3 {
+        grid-area: red3;
+      }
+
+      .red4 {
+        grid-area: red4;
+      }
+
+      .red5 {
+        grid-area: red5;
+      }
+
+      .red6 {
+        grid-area: red6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <img src="img/레드향.jpg" alt="레드향" class="red1">
+      <img src="img/레드향.jpg" alt="레드향" class="red2">
+      <img src="img/레드향.jpg" alt="레드향" class="red3">
+      <img src="img/레드향.jpg" alt="레드향" class="red4">
+      <img src="img/레드향.jpg" alt="레드향" class="red5">
+      <img src="img/레드향.jpg" alt="레드향" class="red6">
+    </div>
+  </body>
+
+</html>

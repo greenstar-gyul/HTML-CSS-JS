@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 가입 양식</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&display=swap');
+
+    #container {
+      width: 600px;
+      border: 1px solid #ccc;
+      padding: 10px;
+
+      font-family: "nanum gothic";
+
+      background-color: #d5ffd8;
+    }
+
+    h1 {
+      margin-top: 0px;
+    }
+
+    #user_info {
+      background-color: #ffffff;
+    }
+
+    #user_info ul{
+      padding: 5px;
+    }
+
+    #user_info li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+
+    #user_info label {
+      font-weight: bold;
+      /* display: inline-block; */
+      width: 120px;
+      float: left;
+    }
+
+    #email_rcv {
+      background-color: #ffd5e7;
+    }
+
+    .border_reset {
+      border: none;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 10px;
+      width: 100px;
+      padding: 5px 10px 5px 10px;
+      /* display: inline-block; */
+      background-color: azure;
+      border: 4px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>회원 가입을 환영합니다</h1>
+    <form action="register.jsp" method="post" name="register">
+      <fieldset id="user_info">
+        <legend>사용자 정보</legend>
+        <ul>
+          <li>
+            <label for="user_id">아이디</label>
+            <input type="text" name="user_id" id="user_id" size="38" placeholder="4자 ~ 10자 사이, 공백 없이">
+          </li>
+          <li>
+            <label for="user_email">이메일</label>
+            <input type="email" name="user_email" id="user_email" size="38">
+          </li>
+          <li>
+            <label for="user_pw">비밀번호</label>
+            <input type="password" name="user_pw" id="user_pw" size="38" placeholder="문자와 숫자, 특수 기호 포함">
+          </li>
+          <li>
+            <label for="user_pw_re">비밀번호 확인</label>
+            <input type="password" name="user_pw_re" id="user_pw_re" size="38">
+          </li>
+          <li>
+            <label for="join_path">가입 경로</label>
+            <select name="join_path" id="join_path">
+              <option value="blog">블로그</option>
+              <option value="search">검색</option>
+              <option value="sns" selected>SNS</option>
+              <option value="etc">기타</option>
+            </select>
+          </li>
+          <li>
+            <label for="memo">메모</label>
+            <textarea name="memo" id="memo" rows="4" cols="40" placeholder="남길 말씀이 있다면 여기에"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset id="email_rcv">
+        <legend>이벤트와 새로운 소식</legend>
+        <label><input type="radio" name="rcv" value="rcv_yes"> 메일 수신</label>
+        <label><input type="radio" name="rcv" value="rcv_no" checked> 메일 수신 안 함</label>
+      </fieldset>
+      <fieldset class="border_reset">
+        <button type="submit">가입하기</button>
+        <button type="reset">취소</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

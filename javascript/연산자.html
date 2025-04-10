@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연산자</title>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>연산자</h1>
+  <script>
+    // 거듭제곱 연산자 : **
+    console.log(2 ** 3);
+
+    // 나머지 연산자 : %
+    console.log(`5 % 3 = ${5 % 3}`);
+
+    // 증가 연산자 : ++
+    // a++는 a = a + 1와 동일
+    // ++a도 a = a + 1과 동일
+    // 단, ++a는 a = a + 1을 가장 먼저 수행
+    // a++는 마지막에 a = a + 1 수행
+    let a = 1;
+    // a++;
+    console.log(`a++ = ${++a}`);
+    console.log(`a++ = ${++a}`);
+    console.log(`${a}`);
+
+    let su1 = 5;
+    let su2 = 3;
+    let str = "5";
+    let str2 = "abc";
+
+    console.log(`덧셈 : ${su1} + ${su2} = ${su1 + su2}`);
+    console.log(`덧셈 : ${su1} + ${str} = ${su1 + str}`);
+    console.log(`덧셈 : ${su1} + ${str2} = ${su1 + str2}`);
+
+    console.log("\n");
+    
+    console.log(`뺄셈 : ${su1} - ${su2} = ${su1 - su2}`);
+    console.log(`뺄셈 : ${su1} - ${str} = ${su1 - str}`);
+    console.log(`뺄셈 : ${su1} - ${str2} = ${su1 - str2}`);
+    
+    console.log("\n");
+    
+    console.log(`나머지 연산 : ${su1} % ${su2} = ${su1 % su2}`);
+    console.log(`나머지 연산 : ${su1} % ${str} = ${su1 % str}`);
+    
+    console.log("\n");
+    
+    console.log(`거듭제곱 연산 : ${su1} ** ${su2} = ${su1 ** su2}`);
+    console.log(`거듭제곱 연산 : ${su1} ** ${str} = ${su1 ** str}`);
+    
+    console.log("\n");
+    
+    console.log(`비교 연산 : ${su1} > ${str} = ${su1 > str}`);
+    console.log(`비교 연산 : ${su1} >= ${str} = ${su1 >= str}`);
+    
+    console.log(`비교 연산 : ${su1} <= ${str} = ${su1 <= str}`);
+    console.log(`비교 연산 : ${su1} < ${str} = ${su1 < str}`);
+
+    console.log(`비교 연산 : ${su1} == ${str} = ${su1 == str}`);
+    console.log(`비교 연산 : ${su1} != ${str} = ${su1 != str}`);
+
+    console.log(`비교 연산 : ${su1} === ${str} = ${su1 === str}`);
+    console.log(`비교 연산 : ${su1} !== ${str} = ${su1 !== str}`);
+    
+    console.log("\n");
+    
+    console.log(`논리 연산 : ${3 >= 5} && ${10 > 5} = ${3 >= 5 && 10 > 5}`);
+    console.log(`논리 연산 : ${3 >= 5} || ${10 > 5} = ${3 >= 5 || 10 > 5}`);
+    console.log(`논리 연산 : not(${3 >= 5} || ${10 > 5}) = ${!(3 >= 5 || 10 > 5)}`);
+
+    console.log("\n");
+
+    /*
+    // 사각형의 넓이 계산
+    let recWidth = prompt("가로 입력");
+    let recHeight = prompt("세로 입력");
+    let recSide = recWidth * recHeight;
+    
+    alert(`사각형의 넓이 = ${recSide}`);
+
+    // 나이 계산
+    let birthYear = prompt("태어난 연도 입력");
+    let year = 2025;
+    let age = year - birthYear;
+
+    document.write(`<span class="bold">태어난 연도는 ${birthYear}년이고, 나이는 ${age}살 입니다.</span>`);
+    */
+    
+  </script>
+</body>
+</html>
